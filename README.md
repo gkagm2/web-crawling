@@ -1,3 +1,10 @@
+### 해야될 것
++ 남의 소스 분석. 바꿔보며 적용.
++ http://www.smtech.go.kr/front/ifg/no/notice01_list.do 사이트 소스 분석.
++ parsing하기
++ crawling
++ etc ...
+
 ### crawling start
 
 + Used goutte library
@@ -107,3 +114,4 @@ C:\Bitnami\wampstack-7.1.12-0\apache2\htdocs\
 + 남의 것을 가져와서 분석하기전에 view에서 testParseCode 디렉토리를 따로 만들어서 거기에 코드 집어넣고 실험해본 결과, 불러옴. 잘 나옴을 확인
 + 남의 것 분석 시작.
 + http://localhost/index.php/main/testcode1 
+
