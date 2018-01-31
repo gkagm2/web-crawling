@@ -76,6 +76,33 @@ Message: cURL error 51: SSL: no alternative certificate subject name matches tar
 $crawler = $client->request('GET', 'http://www.smtech.go.kr/front/ifg/no/notice01_list.do');
 ~~~~
 
-+ https://github.com/FriendsOfPHP/Goutte 에 메뉴얼대로 안됨... 이거 말해줘야 될 듯.
-+ 
++ https://github.com/FriendsOfPHP/Goutte 에 메뉴얼이 주소때문에 오류가남. 제작자에게 말해줘야되나..
++ 추출하는 부분에서 h2.post > a 부분이 나온다. 이게 뭔지 알아봄
 
+~~~~
+// Get the latest post in this category and display the titles
+$crawler->filter('h2.post > a')->each(function ($node) {
+    print $node->text()."\n";
+});
+~~~~
+
++ Guzzle Documentation탐방 시작. http://docs.guzzlephp.org/en/stable/#
++ guzzle 동영상 : https://www.youtube.com/watch?v=GfZLYsgtm-4
+
++ Guzzle + domCrawler 을 이용한 심플 php 웹파싱(스크래핑) http://blog.bongwork.com/archives/137 에서 코드를 분석함.
+
++ 무엇이 나오는지 분석해본 결과
+~~~~
+echo __DIR__ . '<br>';
+echo FCPATH;
+~~~~
+
++ __DIR__와 FCPATH의 경로가 다르게 나옴.
+~~~~
+C:\Bitnami\wampstack-7.1.12-0\apache2\htdocs\application\views
+C:\Bitnami\wampstack-7.1.12-0\apache2\htdocs\
+~~~~
+
++ 누군가 블로그에 써온걸 가져왔는데 화면에 아무것도 안뜸... 에러일 수도 있으니 http://ra2kstar.tistory.com/102 에 에러 로그를 보여주는걸 적용함.
++ 남의 것을 가져와서 분석하기전에 view에서 testParseCode 디렉토리를 따로 만들어서 거기에 코드 집어넣고 실험하본결과 불러옴.
++ 남의 것 분석 시작.
