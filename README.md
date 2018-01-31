@@ -104,5 +104,6 @@ C:\Bitnami\wampstack-7.1.12-0\apache2\htdocs\
 ~~~~
 
 + 누군가 블로그에 써온걸 가져왔는데 화면에 아무것도 안뜸... 에러일 수도 있으니 http://ra2kstar.tistory.com/102 에 에러 로그를 보여주는걸 적용함.
-+ 남의 것을 가져와서 분석하기전에 view에서 testParseCode 디렉토리를 따로 만들어서 거기에 코드 집어넣고 실험하본결과 불러옴.
++ 남의 것을 가져와서 분석하기전에 view에서 testParseCode 디렉토리를 따로 만들어서 거기에 코드 집어넣고 실험해본 결과, 불러옴. 잘 나옴을 확인
 + 남의 것 분석 시작.
++ http://localhost/index.php/main/testcode1 
