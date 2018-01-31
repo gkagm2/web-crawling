@@ -40,4 +40,4 @@ PHP Warning:  PHP Startup: Unable to load dynamic library 'C:/Bitnami/wampstack-
 라고 뜸.
 + php composer.phar 이라하면 여전히 텍스트가 나옴. (@php "%~dp0composer.phar"%*)
 + composer require fabpot/goutte 를 cmd창에 입력하면 아무것도 안뜸. 뭔가 작업을 하고있는건가?
-
++ composer.json 파일을 만들어 시도해봄. 여러번 시도 끝에 됨.
