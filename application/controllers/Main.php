@@ -24,6 +24,9 @@ class Main extends CI_Controller {
       
         $this->load->view('common/footer');
     }
+    function test(){
+        $this->load->view('crawlingTargetSite/test.html');
+    }
 }
 
 ?>

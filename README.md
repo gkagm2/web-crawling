@@ -1,7 +1,4 @@
 ### 해야될 것
-+ 남의 소스 분석. 바꿔보며 적용.
-+ http://www.smtech.go.kr/front/ifg/no/notice01_list.do 사이트 소스 분석.
-+ parsing하기
 + crawling
 + etc ...
 
@@ -166,4 +163,11 @@ composer require symfony/css-selector
 
 + echo $catsHTML;로 확인해보려하니 배열 형태임.  foreach로 하나의 배열마다 var_dump로 어떻게 나오는지 확인해봄.
 
++ 네이버팜에도 한번 테스트 해봄. targetSite3.php에 복붙. navigate에 추가.
++ Dom이 자꾸 언급됨 dom 검색해봄 http://php.net/manual/en/book.dom.php
++ DOM은 Document Object Model
 
++ html에 대해서 빠르게 공부.
+
++ 이해가 안가는부분이 있으니 symfony/dom-crawler에 대해서 알아봐야겠다. https://symfony.com/doc/current/components/dom_crawler.html
++ 음.....................................
