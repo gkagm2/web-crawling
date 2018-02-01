@@ -1,3 +1,3 @@
 <a href="/">main</a>
-<a href="/main/testGoutte"> test goutte</a>
-<a href="/main/testCode1"> test Code1</a>
+<a href="/main/siteTarget/1">smtech</a>
+<a href="/main/siteTarget/2">testSite</a>

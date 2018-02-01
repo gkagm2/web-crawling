@@ -148,4 +148,5 @@ PHP 프로세스가 진행되면서 파일을 포함한다. 구문을 만날때 
 + 크롤링 도움된느 사이트 **https://lamp-dev.com/scraping-products-from-walmart-with-php-guzzle-crawler-and-doctrine/958** **http://docs.guzzlephp.org/en/stable/psr7.html#body**
 + 음 위에 사이트를 참고하여 하다보니 소스를 가지고 오긴 했다.
 + css없고, 태그없고.. 더 분석분석~
-+ 
+
++ 전체적으로 프레임워크 가다듬음.
