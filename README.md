@@ -115,3 +115,37 @@ C:\Bitnami\wampstack-7.1.12-0\apache2\htdocs\
 + 남의 것 분석 시작.
 + http://localhost/index.php/main/testcode1 
 
+
+### 20180201
++ index.php 적기 귀찮아서 config파일에 .htaccess 수정함
++ 페이지를 시작하면Main으로 나올 수 있게 routes.php파일에서 메인 페이지 경로를 수정함.
++ localhost로 들어가면 localhost/index.php/main 에 있는 것이 뜬다.
++ 링크 입력해서 사이트에 들어가는게 번거로워서 navigate를 만듬. 화면에서 링크를 클릭하면 갈 수 있게 함.
++ 코드 분석을 함.
+
++ crawling하는 class를 따로 만들기로 하여 crawlingClass에 crawling.php를 만든 후 MyCrawling클래스를 하나 만듬. 공통적인 부분이 있어야 되는데.. 후..
++ site마다 크롤링해야될게 다르므로 crawlingTargetSite 디렉토리를 하나 만들어서 거기에 사이트들을 모아놓기로 결정. targetSite.php를 만들어서 크롤링해볼http://www.smtech.go.kr/front/ifg/no/notice01_list.do 사이트의 Smetch 클래스를 만듬.
++ Smetch클래스가 MyCrawling클래스를 extends하려고하는데 서로 다른 디렉토리에 있음. 다른 디렉토리에 있는 것을 연결하기위해 require와 include_once로 실험해봄
++ require는 안되고 include_once는 되길래 차이점이 궁금하여 사이트에서 조사함. http://faultnote.tistory.com/323
++ 위의 사이트에서 문장을 따왔다. 
+
+~~~~
+require() 구문
+
+PHP 파서가 실행되기 전에 파일을 포함한다. (C 의 #include 와 같은 개념)
+에러 상황시 경고를 발생시키고 이후 코드의 실행이 중단된다.  
+
+include() 구문
+
+PHP 프로세스가 진행되면서 파일을 포함한다. 구문을 만날때 마다 평가한다.
+따라서 조건에 따라 파일을 코드를 추가하거나 제외할 수 있다.
+에러 상황시 경고를 발생시킨 후 나머지 코드의 실행을 계속한다.
+~~~~
+
++ include_once로 하면 정상 작동 되므로 예제 파일에 있는걸 참고하여 나만의 myCrawling 클래스를 만들어 보겠다. 
++ 음.. 아니다. 에러가 난다. controllers에서 myCrawling파일과 targetSite파일을 불러오니 실행이 된 것이였다.. controllers에 myCrawling파일을 적지 않으면 클래스를 찾을 수 없다고 뜬다.. 그냥 controllers에서 불러오는걸로 해야겠다.
++ bootstrap은 나중에 적용하는걸로...
++ 크롤링 도움된느 사이트 **https://lamp-dev.com/scraping-products-from-walmart-with-php-guzzle-crawler-and-doctrine/958** **http://docs.guzzlephp.org/en/stable/psr7.html#body**
++ 음 위에 사이트를 참고하여 하다보니 소스를 가지고 오긴 했다.
++ css없고, 태그없고.. 더 분석분석~
++ 

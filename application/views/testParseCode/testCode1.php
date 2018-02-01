@@ -1,9 +1,5 @@
 <?php
-//require __DIR__."/vendor/autoload.php";
-//include_once __DIR__."/vendor/autoload.php";
-
 error_reporting(E_ALL);
-
 ini_set("display_errors", 1);
 
 
@@ -28,7 +24,7 @@ class Sir
  
     }
  
-    public function getList($page = 1) {
+    public function getList($page = 2) {
  
         $bo_table = "cm_free"; //자유게시판명
  
