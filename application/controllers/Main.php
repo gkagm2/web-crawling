@@ -19,18 +19,8 @@ class Main extends CI_Controller {
         
         $this->load->view('crawlingClass/crawling');    
 
-        switch($getSite){
-            case 1:
-                //target site
-                $this->load->view('crawlingTargetSite/targetSite');
-            break;
-            case 2:
-                //test site
-                $this->load->view('crawlingTargetSite/targetSite2');
-            break;
-
-        }
-        
+        $this->load->view('crawlingTargetSite/targetSite' . $getSite);
+      
         $this->load->view('common/footer');
     }
 }
