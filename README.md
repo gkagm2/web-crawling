@@ -150,3 +150,20 @@ PHP 프로세스가 진행되면서 파일을 포함한다. 구문을 만날때 
 + css없고, 태그없고.. 더 분석분석~
 
 + 전체적으로 프레임워크 가다듬음.
+
++ get방식으로 페이지의 내용을 가져왔으니 조리해봅세.
+
++ guzzle,Symfony DOM, css-selector가 없어서 패키지 다운.
+~~~~
+composer require guzzle/guzzle:~3.9
+composer require symfony/dom-crawle
+composer require symfony/css-selector
+~~~~
+
++ $body = $response->getBody(true)로 하니  추출하는 $crawler = new Crawler($body); 부분에서 에러남 
++ 해결 방법이 나와있음 https://stackoverflow.com/questions/29898972/guzzle-response-cant-be-used-with-domcrawler
++ $body = $response->getBody()->getContents();로 바꿔서 해결.
+
++ echo $catsHTML;로 확인해보려하니 배열 형태임.  foreach로 하나의 배열마다 var_dump로 어떻게 나오는지 확인해봄.
+
+

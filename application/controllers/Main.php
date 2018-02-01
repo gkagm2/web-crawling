@@ -19,6 +19,7 @@ class Main extends CI_Controller {
         
         $this->load->view('crawlingClass/crawling');    
 
+        //getSite로 사이트를 표출.
         $this->load->view('crawlingTargetSite/targetSite' . $getSite);
       
         $this->load->view('common/footer');
