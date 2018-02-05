@@ -57,7 +57,7 @@ class Naver extends MyCrawling{
                               ->getBody(true);
             echo $responseBody;
         }
-
+        echo $response->getBody();
 
         /* 페이지 긁기 */
         //추출하기

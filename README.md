@@ -171,3 +171,8 @@ composer require symfony/css-selector
 
 + 이해가 안가는부분이 있으니 symfony/dom-crawler에 대해서 알아봐야겠다. https://symfony.com/doc/current/components/dom_crawler.html
 + 음.....................................
+
+### 20180205
++ guzzle 분석중. http://docs.guzzlephp.org/en/stable/psr7.html#headers
++ getBody()로 해본 결과 가져온 데이터로 네이버 사이트를 보여주는데 크롤링 할 부분인 상품평이 없다..어쩐지 안보여준다 했더니...
++ stream_get_meta_data()에 관한 링크 http://php.net/manual/en/function.stream-get-meta-data.php
