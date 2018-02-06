@@ -67,7 +67,7 @@ class Naver extends MyCrawling{
         $catsHTML = $crawler
                         ->filter($filter)
                         ->each(function (Crawler $node) {
-                            return $node->html();
+                            return $node->html();   
                         });
         unset($crawler); //추출한 다음 크롤러의 객체가 필요 없으므로 제거
 

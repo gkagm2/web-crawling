@@ -314,10 +314,29 @@ $crawler = $crawler->filterXPaht('//default:entry/media:group//yt:aspectRatio');
 + 들러봄https://packagist.org/packages/stil/curl-easy
 + composer stil/curl-easy 설치, $request = new \cURL\Request('~~~');에서 오류남 어떻게 include하는지 모름. 방법을 찾아봐야겠음.
 
-##python
+####python
 + python설치
 + pycharm 설치
 + https://beomi.github.io/2017/01/20/HowToMakeWebCrawler/
 + beautifulsoup 설치, requests 설치
 + windows환경에서 pip로 셜치하려면 python이 설치되어있는 디렉토리로 이동 후 Script디렉토리에서 해야 함
 + 출력결과 똑같이 구매평이 안보임.
++ server side framework 'Django' 강의 :  https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction
+
++ http://excelsior-cjh.tistory.com/entry/04-Scrapy%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%89%B4%EC%8A%A4%ED%81%AC%EB%A1%A4%EB%A7%81-%ED%95%98%EA%B8%B0
++ 동기적인 방법으로 가져오기위해 selenium을 설치 (pip install selenium)
++ beautifulsoup, selenium : https://beomi.github.io/2017/02/27/HowToMakeWebCrawler-With-Selenium/
++ https://wayhome25.github.io/python/2017/04/25/cs-27-crawling/
++ test3.py 파일을 만듬 오류 생김 
+~~~~
+https://stackoverflow.com/questions/16626734/typeerror-module-object-is-not-callable-when-importing-selenium
+~~~~
+
++ 어떤 문제인지 찾기 https://stackoverflow.com/questions/16626734/typeerror-module-object-is-not-callable-when-importing-selenium
+
++  https://www.youtube.com/watch?v=zRrubJ13I8s
+
+
+
+
+
