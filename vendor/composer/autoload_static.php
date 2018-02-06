@@ -35,6 +35,7 @@ class ComposerStaticInitdae7efd45a9a9f8a38c5f1c222526dbf
         'P' => 
         array (
             'Psr\\Http\\Message\\' => 17,
+            'PhpParser\\' => 10,
         ),
         'G' => 
         array (
@@ -89,6 +90,10 @@ class ComposerStaticInitdae7efd45a9a9f8a38c5f1c222526dbf
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
+        'PhpParser\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
+        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -121,6 +126,13 @@ class ComposerStaticInitdae7efd45a9a9f8a38c5f1c222526dbf
             'org\\bovigo\\vfs' => 
             array (
                 0 => __DIR__ . '/..' . '/mikey179/vfsStream/src/main/php',
+            ),
+        ),
+        'S' => 
+        array (
+            'Sunra\\PhpSimple\\HtmlDomParser' => 
+            array (
+                0 => __DIR__ . '/..' . '/sunra/php-simple-html-dom-parser/Src',
             ),
         ),
         'P' => 

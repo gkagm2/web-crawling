@@ -44,7 +44,7 @@ class Naver extends MyCrawling{
         /* 응답받기 */
 
         //https 접속시 ssl 오류가 발생하면, ['verify' => false] 옵션을 추가한다.
-        $response = $client->request('GET', $this->url, ['verify' => false]);
+        $response = $client->request('GET', $this->url , ['verify' => false]);
         //$response = $client->request('GET', $this->url); //이것으로 해도 됨.
 
 
@@ -58,7 +58,7 @@ class Naver extends MyCrawling{
             echo $responseBody;
         }
         echo $response->getBody();
-
+        
         /* 페이지 긁기 */
         //추출하기
         $crawler = new Crawler($body);
@@ -86,8 +86,11 @@ class Naver extends MyCrawling{
 /************ 실행 area **************/
 
 
-//smetch사이트의 url을 받아옵니다.
-$smet = new Naver('http://smartstore.naver.com/vv8788/products/528910613?NaPm=ct%3Djd44r9z4%7Cci%3D05d57826b2fb08fdbd613c6db919c089bc81b0e1%7Ctr%3Dsls%7Csn%3D356103%7Chk%3Dc48e2b59fcc8bbbcc1e1ac1c3fc9479a09ebef88');  
+//naver사이트의 url을 받아옵니다.
+
+$smet = new Naver('http://smartstore.naver.com/vv8788/products/528910613');  
+
+//$smet = new Naver('http://smartstore.naver.com/vv8788/products/528910613?NaPm=ct%3Djd44r9z4%7Cci%3D05d57826b2fb08fdbd613c6db919c089bc81b0e1%7Ctr%3Dsls%7Csn%3D356103%7Chk%3Dc48e2b59fcc8bbbcc1e1ac1c3fc9479a09ebef88');  
 
 //list를 불러옵니다.
 $smet->getList();

@@ -1,9 +1,8 @@
 <?php
 use GuzzleHttp\Stream\Stream;
-
 //Crawler를 사용하기위해
 use Symfony\Component\DomCrawler\Crawler;
-
+//namespace와 calss 사이에는 백슬래시(\)로 구분함.
 use Symfony\Component\CssSelector;
 
 
@@ -15,10 +14,10 @@ class Smetch extends MyCrawling{
     function __construct($url){
         $this->url = $url;
     }
-
     function getUrl($url){
         $this->url = $url;
     }
+
     function getList(){
 
         // ZGuzzleHttp\Client를 생성함.
@@ -44,6 +43,7 @@ class Smetch extends MyCrawling{
 
 
         /* 페이지 긁기 */
+        
         //추출하기
         $crawler = new Crawler($body);
         $filter = '.tbl_type01'; //필터에서 이부분을 걸러요.

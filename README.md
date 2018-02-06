@@ -206,5 +206,118 @@ composer require symfony/css-selector
 + 관련 뉴스 https://byline.network/2016/02/1-64/
 + 웹 크롤링 시 데이터 못 읽어오는 이유 http://hashcode.co.kr/questions/2039/beautifulsoup%EC%9C%BC%EB%A1%9C-%EC%9B%B9%ED%81%AC%EB%A1%A4%EB%A7%81-%ED%95%A0%EB%95%8C-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EB%AA%BB-%EC%9D%BD%EC%96%B4%EC%98%A4%EB%8A%94%EA%B1%B4-%EC%96%B4%EB%96%BB%EA%B2%8C-%ED%95%B4%EA%B2%B0%ED%95%A0%EC%88%98%EC%9E%88%EC%9D%84%EA%B9%8C%EC%9A%94
 + 구글 크롤링 및 index 생성 https://www.google.com/intl/ko/insidesearch/howsearchworks/crawling-indexing.html
++ python 크롤링 강의 **https://nomade.kr/vod/crawling/127/**
 
+### 20180206
++ crawler site : https://symfony.com/doc/current/components/dom_crawler.html
++ 이 cralwer클래스는 HTML 및 XML 문서에 대한 DOM 탐색을 용이하게 한다.
+DomCrawler 구성 요소는 DOM을 조작하거나 HTML/XML을 덮어씌우도록 설계되지 않았다.
 
+#### 사용법
+DomElement objects의 instance는 기본적으로 노드를 쉽게 사용할 수 있다. 
+~~~~
+use Symfony\Component\DomCrawler\Crawler;
+
+$html = <<<'HTML'
+<!DOCTYPE html>
+<html>
+    <body>
+        <p class="message">Hello World!</p>
+        <p>Hello Crawler!</p>
+    </body>
+</html>
+HTML;
+
+$crawler = new Crawler($html);
+
+foreach ($crawler as $domElement) {
+    var_dump($domElement->nodeName);
+}
+~~~~
+
+DomCrawler는 공식적인 사양과 일치하도록 HTML을 자동으로 수정한다. 예를 들어, <p>태그 안에 <p>태그를 중첩하면 상위 태그로 이동한다. 
+
+#### 노드 필터링
++ XPath표현식은 사용하기 쉽다.
+~~~~
+$crawler = $cralwer->filterXpath('descendant-or-self::body/p');
+~~~~
+
+DOMXPath::query는 XPath query를 수행하기 위해 내부적으로 사용한다.
+
+CssSelector 구성 요소를 설치 한 경우 더욱 쉬워진다. 
+~~~~
+$crawler = $crawler->filter('body > p');
+~~~~
+
+익명 함수는 좀 더 복잡한 기준으로 필터링 할 수 있다.
+~~~~
+use Symfony\Component\DomCrawler\Crawler;
+// ...
+
+$crawler = $crawler
+    ->filter('body > p')
+    ->reduce(function (Crawler $node, $i) {
+        // filter every other node
+        return ($i % 2) == 0;
+    });
+~~~~
+
+노드를 제거하려면 익명의 함수는 false를 반환해야 한다.
+
+모든 필터 함수들은 필터된 내용이 포함된 새로운 Crawler instance를 리턴한다.
+
+filterXPath()와 filter() 함수들은 모두 XML namespaces와 함께 작동한다. XML namespaces는 자동으로 검색되거나 직접 등록할 수 있다.
+~~~~
+<?xml version="1.0" encoding="UTF-8"?>
+<entry
+    xmlns="http://www.w3.org/2005/Atom"
+    xmlns:media="http://search.yahoo.com/mrss/"
+    xmlns:yt="http://gdata.youtube.com/schemas/2007"
+>
+    <id>tag:youtube.com,2008:video:kgZRZmEc9j4</id>
+    <yt:accessControl action="comment" permission="allowed"/>
+    <yt:accessControl action="videoRespond" permission="moderated"/>
+    <media:group>
+        <media:title type="plain">Chordates - CrashCourse Biology #24</media:title>
+        <yt:aspectRatio>widescreen</yt:aspectRatio>
+    </media:group>
+</entry>
+~~~~
++ xml에 대해서 잘 모른다. https://msdn.microsoft.com/ko-kr/library/system.xml.linq.xnamespace.xmlns(v=vs.110).aspx
+
+filerXPath()로 Crawler namespaces 별칭을 등록 할 필요없이 필터링 할 수 있다. 
+~~~~
+$crawler = $crawler->filterXPaht('//default:entry/media:group//yt:aspectRatio');
+~~~~
+
+또한 filter()
+~~~~
+#crawler = $crawler->filter('default|entry media|group yt|aspectRatio');
+~~~~
+
++ **동적으로 받아오는 부분은 크롤링하면 보이지 않는다. 관련 사례 : https://www.phpschool.com/gnuboard4/bbs/board.php?bo_table=qna_function&wr_id=443525&sca=&sfl=wr_subject%7C%7Cwr_content&stx=%B1%DC%BE%EE&sop=and**
+
++ dom_crawler
++ https://stackoverflow.com/questions/6965868/dynamic-token-parsing
++ http://php.net/manual/en/function.preg-replace-callback.php
++ https://stackoverflow.com/questions/6965868/dynamic-token-parsing
++ http://nalab.kr/qna/27850988
++ https://apps.timwhitlock.info/jparser/index.html
++ https://timwhitlock.info/tag/jparser/
++ https://davidwalsh.name/php-notifications
++ https://github.com/Seravo/wp-nettix-sync/blob/master/parser.php
+
++ composer에 https://davidwalsh.name/php-notifications 가 있길래 composer로 설치도 함.
++ include하는 방법을 몰라서 사용을 못함.
+
++ 들러봄https://packagist.org/packages/stil/curl-easy
++ composer stil/curl-easy 설치, $request = new \cURL\Request('~~~');에서 오류남 어떻게 include하는지 모름. 방법을 찾아봐야겠음.
+
+##python
++ python설치
++ pycharm 설치
++ https://beomi.github.io/2017/01/20/HowToMakeWebCrawler/
++ beautifulsoup 설치, requests 설치
++ windows환경에서 pip로 셜치하려면 python이 설치되어있는 디렉토리로 이동 후 Script디렉토리에서 해야 함
++ 출력결과 똑같이 구매평이 안보임.

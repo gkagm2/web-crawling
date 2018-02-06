@@ -384,7 +384,7 @@ class Crawler implements \Countable, \IteratorAggregate
         return $this->createSubCrawler(array_slice($this->nodes, $offset, $length));
     }
 
-    /**
+    /** l
      * Reduces the list of nodes by calling an anonymous function.
      *
      * To remove a node from the list, the anonymous function must return false.
