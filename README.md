@@ -334,9 +334,13 @@ https://stackoverflow.com/questions/16626734/typeerror-module-object-is-not-call
 
 + 어떤 문제인지 찾기 https://stackoverflow.com/questions/16626734/typeerror-module-object-is-not-callable-when-importing-selenium
 
-+  https://www.youtube.com/watch?v=zRrubJ13I8s
++ selenium 동영상 :  https://www.youtube.com/watch?v=zRrubJ13I8s
++ selenium 동영상 : https://www.youtube.com/watch?v=oM-yAjUGO-E
 
-
+### 20180207
++ selenium 동영상 :  https://www.youtube.com/watch?v=zRrubJ13I8s
++ 위의 사이트에 동영상보면서 하니 페이스북 로그인 됨.  긁기만 하면 될 듯.
++ 네이버 카페를 긁어보겠음.
 
 
 
