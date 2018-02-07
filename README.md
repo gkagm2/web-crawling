@@ -349,5 +349,26 @@ https://stackoverflow.com/questions/16626734/typeerror-module-object-is-not-call
 + python crawling 강의 : **https://www.youtube.com/watch?v=H8wUYz22joM&t=5s**
 + https://www.youtube.com/watch?v=H8wUYz22joM&t=5s 사이트의 테이블 정보를 crawling 해봄 test7.py
 + [1:] 이게 무슨 뜻인지 검색 https://stackoverflow.com/questions/27652686/python-what-does-for-x-in-a1-mean , https://stackoverflow.com/questions/509211/understanding-pythons-slice-notation
-+ .cvs 파일 형식이 무엇인지 https://ko.wikipedia.org/wiki/CSV_(%ED%8C%8C%EC%9D%BC_%ED%98%95%EC%8B%9D)
++ .cvs 파일 형식이 무엇인   지 https://ko.wikipedia.org/wiki/CSV_(%ED%8C%8C%EC%9D%BC_%ED%98%95%EC%8B%9D)
 + test7_basketball.csv 파일에 쓰기로 해놨음.
++ 밤토끼 웹툰 사이트를 crawling해보려고 했는데 request 오류뜬다. 다른 예제를 했을 때는 잘 되는 소스 코드였는데 왜이러지... test8.py
+오류 내용
+~~~~
+Traceback (most recent call last):
+  File "C:/Bitnami/wampstack-7.1.12-0/apache2/htdocs/application/views/Python/test8.py", line 9, in <module>
+    thepage = urllib.request.urlopen(theurl)
+  File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 532, in open
+    response = meth(req, response)
+  File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 642, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 570, in error
+    return self._call_chain(*args)
+  File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 504, in _call_chain
+    result = func(*args)
+  File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 650, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+~~~~
+

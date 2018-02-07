@@ -31,6 +31,3 @@ file.write(bytes(header, encoding="ascii", errors='ignore'))
 file.write(bytes(playerdatasaved, encoding="ascii", errors='ignore'))
 print(header)
 print(playerdatasaved)
-
-
-
