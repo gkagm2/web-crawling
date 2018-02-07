@@ -10,7 +10,9 @@ thepage = urllib.request.urlopen(theurl)
 soup = BeautifulSoup(thepage, "html.parser")
 
 # <title> 태그를 찾아서 프린트
-#print(soup.title.text)
+#print(soup.title.text) # 이렇게 해도 됨
+print(soup.find("title").text)
+
 
 # <a> 태그를 찾는다.
 #print(soup.findAll('a'))

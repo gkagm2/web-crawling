@@ -346,6 +346,8 @@ https://stackoverflow.com/questions/16626734/typeerror-module-object-is-not-call
 + test5.py 파일로 네이버 로그인 후 원하는 링크로 가서 해당 글이나 이미지 불러올 수 있게 만듬
 + python crawling 강의 : **https://www.youtube.com/watch?v=o0RasL5uxkg**
 + 도날드트럼프 twitter crawling 해봄 test6.py 
-
-
-
++ python crawling 강의 : **https://www.youtube.com/watch?v=H8wUYz22joM&t=5s**
++ https://www.youtube.com/watch?v=H8wUYz22joM&t=5s 사이트의 테이블 정보를 crawling 해봄 test7.py
++ [1:] 이게 무슨 뜻인지 검색 https://stackoverflow.com/questions/27652686/python-what-does-for-x-in-a1-mean , https://stackoverflow.com/questions/509211/understanding-pythons-slice-notation
++ .cvs 파일 형식이 무엇인지 https://ko.wikipedia.org/wiki/CSV_(%ED%8C%8C%EC%9D%BC_%ED%98%95%EC%8B%9D)
++ test7_basketball.csv 파일에 쓰기로 해놨음.
