@@ -21,7 +21,7 @@ driver.find_element_by_id("pw").send_keys(" ")
 driver.find_element_by_class_name("btn_global").click()
 
 driver.get_screenshot_as_file("./Screenshots/naver.cafe2.png")
-
+    
 driver.get("http://cafe.naver.com/devenglish/258")
 driver.maximize_window()
 driver.implicitly_wait(20)

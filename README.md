@@ -342,5 +342,10 @@ https://stackoverflow.com/questions/16626734/typeerror-module-object-is-not-call
 + 위의 사이트에 동영상보면서 하니 페이스북 로그인 됨.  긁기만 하면 될 듯.
 + 네이버 카페를 긁어보겠음.
 
++ pycharm 글꼴, 글꼴 크기, 테마 설정
++ test5.py 파일로 네이버 로그인 후 원하는 링크로 가서 해당 글이나 이미지 불러올 수 있게 만듬
++ python crawling 강의 : **https://www.youtube.com/watch?v=o0RasL5uxkg**
++ 도날드트럼프 twitter crawling 해봄 test6.py 
+
 
 
