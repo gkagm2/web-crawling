@@ -7,3 +7,4 @@ $path = '/main/siteTarget/';
 <a href="<?=$path?>3">naver</a>
 <a href="<?=$path?>4">genie </a>
 <a href="<?=$path?>5">naver2</a>
+<a href="<?=$path?>6">crawlingtest</a>

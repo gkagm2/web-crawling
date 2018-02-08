@@ -367,8 +367,18 @@ Traceback (most recent call last):
     return self._call_chain(*args)
   File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 504, in _call_chain
     result = func(*args)
-  File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 650, in http_error_default
+  File "C:\User
+  s\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 650, in http_error_default
     raise HTTPError(req.full_url, code, msg, hdrs, fp)
 urllib.error.HTTPError: HTTP Error 403: Forbidden
 ~~~~
 
+### 20180208
++ python을 빠르게 알려주는 90분짜리 동영상이 있다. 이걸 봄 https://www.youtube.com/watch?v=sEL6AsovDDQ&t=2225s
++ self가 뭔지 ? https://wikidocs.net/1742
++ crawling으로 img 다운로드 시도 https://uwaterloo.ca/
++ https://pixabay.com/ko/ 에 있는 사진들 다운로드 성공
++ python과 django 알려주는 사이트 : https://tutorial.djangogirls.org/ko/django_installation/
++ 크롤링해서 가져온 .jpeg 파일을 웹 브라우저에 보여주려고 하는데 엑박이 뜸. https://okky.kr/article/231083
++ 경로를 다양하게 설정해봤으나 안됨.
++ php 현재 디렉토리 경로를 출력하는 소스 : http://www.jynote.net/48
