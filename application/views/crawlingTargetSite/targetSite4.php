@@ -82,7 +82,8 @@ class Genie extends MyCrawling{
 
 }
 
-/************ 실행 area **************/
+/************ 실행 area **************/]
+
 
 
 //genie사이트의 url을 받아옵니다.

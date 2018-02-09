@@ -7,6 +7,7 @@
 + Used goutte library
 + what is Gutte ? Goutte is a screen scraping and web crawling library for PHP. Goutte provides a nice API to crawl websites and extract data from the HTML/XML responses.
 + CodeIgniter version : 3.1.6
++ Bootstrap version : 3.3.2
 
 
 ## 삽질 log
@@ -382,3 +383,8 @@ urllib.error.HTTPError: HTTP Error 403: Forbidden
 + 크롤링해서 가져온 .jpeg 파일을 웹 브라우저에 보여주려고 하는데 엑박이 뜸. https://okky.kr/article/231083
 + 경로를 다양하게 설정해봤으나 안됨.
 + php 현재 디렉토리 경로를 출력하는 소스 : http://www.jynote.net/48
+
+###20180209
++ bootstrap 3.3.2버전 적용
++ python os.path가 어떤것에 관한 것인지 조사 https://docs.python.org/2/library/os.path.html
++ 파일 읽고 쓰기 정보 https://wikidocs.net/26

@@ -1,7 +1,6 @@
 <?php
 
   include_once FCPATH . 'vendor/autoload.php';
-    
         use Goutte\Client;
         
         $client = new Client();
