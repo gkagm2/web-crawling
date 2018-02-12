@@ -24,13 +24,15 @@ class Main extends CI_Controller {
 
         //getSite로 사이트를 표출.
         $this->load->view('crawlingTargetSite/targetSite' . $getSite);
-
     }
     function cartoon(){
         $this->load->view('python/cartoon.csv');
     }
     function basketball_player_info(){
         $this->load->view('python/Test7_Basketball.csv');
+    }
+    function twitter(){
+        $this->load->view('python/twitterPicture/picture');
     }
 }   
 

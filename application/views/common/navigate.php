@@ -12,7 +12,10 @@
     <button type="button" class="btn btn-link"><a href="<?=$path?>6">crawlingtest</a></button>
     <button type="button" class="btn btn-link"><a href="/main/basketball_player_info">basketball player info</a></button>
     <button type="button" class="btn btn-link"><a href="/main/cartoon">mintoon</a></button>
+    <button type="button" class="btn btn-link"><a href="<?=$path?>7">twitter</a></button>
     <button type="button" class="btn btn-link"><a href="/main/">?</a></button>
+    
+    
     
     
     

@@ -1,11 +1,14 @@
 ### 해야될 것
-+ crawling
-+ etc ...
++ twitter scroll 시 동적 생성되는 사진들 긁어모으기. 
++ url이 파일에 보내지면 python 코드가 실행이 되어야 하는데 어떻게 해야되나..
++ php파일 디렉토리 개수 구하기.
++ 디렉토리 안에 있는 파일들 압축.
++ 압축 후 a링크로 download할 수 있게 하기.
 
 ### crawling start
 
 + Used goutte library
-+ what is Gutte ? Goutte is a screen scraping and web crawling library for PHP. Goutte provides a nice API to crawl websites and extract data from the HTML/XML responses.
++ what is Gutte ? Goutte is a screen scraping and web crawling library for PHP. Goutte provides a nice API to crawl websites and extract data from the HTML/XML respo nses.
 + CodeIgniter version : 3.1.6
 + Bootstrap version : 3.3.2
 
@@ -19,7 +22,7 @@
 + composer사이트에 들어감. https://getcomposer.org/doc/
 + cmd창에 echo @php "%~dp0composer.phar" %*>composer.bat 라고 입력하면 composer.bat파일이 생성된다하여 그대로 따라함.
 + .bat파일 생성안됨. 파일 속성들어가서 메모장으로 바꿨더니 cmd창에서 composer가 실행이 아예 안되고 메모장으로 뜸.
-+ 연결파일 해제 해결방법 탐색중 (이런데서 삽질하다니........)
++ 연결파일 해제 해결방법 탐색중 (이런데서 삽질하다니........) 
  https://answers.microsoft.com/ko-kr/windows/forum/windows8_1-files/%EC%97%B0%EA%B2%B0/f2024c68-f350-40b1-ab7a-41684bab92c5?auth=1 : windows7 설정방법이여서 안됨
 
  http://treemac.tistory.com/100 : windows10 설정방법임 완벽하게 했는데 마지막에 확인버튼을누르면 오류뜨고 안됨.
@@ -388,3 +391,47 @@ urllib.error.HTTPError: HTTP Error 403: Forbidden
 + bootstrap 3.3.2버전 적용
 + python os.path가 어떤것에 관한 것인지 조사 https://docs.python.org/2/library/os.path.html
 + 파일 읽고 쓰기 정보 https://wikidocs.net/26
++ 서버에 저장된 데이터를 웹 화면에 표시
++ minotoon 페이지 크롤링
++ 서버에 있는 이미지 파일을 표시해주고 싶은데 경로문제로 오류 뜸
++ 만화링크가 걸려 있는 곳으로 들어가서 안에있는 내용을 가져오면 오류 뜸 되다가 안되다가 함. 너무 많은 신호를 보내서 거절당한건가..?
+오류 내용
+~~~~
+Traceback (most recent call last):
+  File "C:/Bitnami/wampstack-7.1.12-0/apache2/htdocs/application/views/Python/test9.py", line 29, in <module>
+    soup2 = make_soup(link)
+  File "C:/Bitnami/wampstack-7.1.12-0/apache2/htdocs/application/views/Python/test9.py", line 11, in make_soup
+    thepage = urllib.request.urlopen(url)
+  File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 532, in open
+    response = meth(req, response)
+  File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 642, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 570, in error
+    return self._call_chain(*args)
+  File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 504, in _call_chain
+    result = func(*args)
+  File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 650, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+~~~~
++ 오류 내용을 검색해보니 오류 내용의 이유 : http://sarc.io/index.php/development/806-python-html-contents-file-http-error-403-forbidden
++ suck framework
+
+### 20180212
++ twitter picture crawling 파일 생성
++ https://cjh5414.github.io/python-with/
++ url 입력 폼 생성 python/url.txt로 write함.
++ 생각해보니 입력한다고 해도 python 코드를 실행시켜야되는데.. 이걸 우짜지..?
++ pytho 코드작성 twitter에서 사진 가지고옴.
++ 스크롤해서 나오는것도 긁어모으는 정보 
+~~~~
+https://www.facebook.com/174499879257223/posts/918044078236129
+http://zinee-world.tistory.com/408
+https://www.youtube.com/watch?v=ivS3FzAL9ss 
+http://bongholee.com/2017/06/python-web-crawling%EC%9D%84-%ED%86%B5%ED%95%B4-raw-data-%EA%B5%AC%ED%95%98%EA%B8%B0-selenium-library/
+~~~~
++ 아.. 진짜 경로..
++ 경로문제 해결
+
