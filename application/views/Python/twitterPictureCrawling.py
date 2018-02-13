@@ -12,7 +12,7 @@ def make_soup(url):
 
 
 #url.txt 파일을 읽는다.
-with open('url.txt', 'r',encoding='utf-8') as readFile:
+with open('url.txt', 'r', encoding='utf-8') as readFile:
     url= readFile.read()
     readFile.closed
 
@@ -29,4 +29,4 @@ for img in soup.find_all('div',{"class":"AdaptiveMedia-photoContainer js-adaptiv
     nameCount += 1
     imagefile = open("./twitterImgFile/"+fileName + ".jpeg", 'wb')
     imagefile.write(urllib.request.urlopen(imgUrl).read())
-    print(img)
+

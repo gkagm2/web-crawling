@@ -387,7 +387,7 @@ urllib.error.HTTPError: HTTP Error 403: Forbidden
 + 경로를 다양하게 설정해봤으나 안됨.
 + php 현재 디렉토리 경로를 출력하는 소스 : http://www.jynote.net/48
 
-###20180209
+### 20180209
 + bootstrap 3.3.2버전 적용
 + python os.path가 어떤것에 관한 것인지 조사 https://docs.python.org/2/library/os.path.html
 + 파일 읽고 쓰기 정보 https://wikidocs.net/26
@@ -435,3 +435,24 @@ http://bongholee.com/2017/06/python-web-crawling%EC%9D%84-%ED%86%B5%ED%95%B4-raw
 + 아.. 진짜 경로..
 + 경로문제 해결
 
+### 20180213
++ php에서 python을 실행시키기위해 어떻게 해야될까 고민하다가 php에도 unix system의 systemcall 처럼 지원해주는 명령어로 사용하기로 결정.
++ python에 잘 작동되던 코드가 소스를 좀 추가했더니 작동이 안되길래 다시 지웠는데.. 작동이 안됨.
+~~~~
+Traceback (most recent call last):
+  File "C:/Bitnami/wampstack-7.1.12-0/apache2/htdocs/application/views/Python/twitterPictureCrawling.py", line 22, in <module>
+    soup = make_soup(url)
+  File "C:/Bitnami/wampstack-7.1.12-0/apache2/htdocs/application/views/Python/twitterPictureCrawling.py", line 9, in make_soup
+    thepage = urllib.request.urlopen(url)
+  File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 511, in open
+    req = Request(fullurl, data)
+  File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 329, in __init__
+    self.full_url = url
+  File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 355, in full_url
+    self._parse()
+  File "C:\Users\jjangmen\AppData\Local\Programs\Python\Python36-32\lib\urllib\request.py", line 384, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: '/media'
+~~~~
